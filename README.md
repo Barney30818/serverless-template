@@ -6,7 +6,7 @@
 
 As this is a serverless application, the [Serverless Framework](https://serverless.com/) is used to derive and deploy a CloudFormation template based on the specified [serverless.yml](./serverless.yml).
 
-You need to configure `serverless.yml` like setting "vpc", "iam", "s3bucket", and so on... infra to meet your requirement.
+You need to configure `serverless.yml` like setting "vpc", "iam", "s3bucket", and so on infra...to meet your requirement.
 
 ## Setup
 

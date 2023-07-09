@@ -1,11 +1,11 @@
 package main
 
 import (
-	"adc.github.trendmicro.com/container-security/vcs-inventory/pkg/inventory"
+	"github.com/Barney30818/serverless-template/pkg/hello"
 	"github.com/aws/aws-lambda-go/lambda"
 )
 
 func main() {
-	handler := inventory.NewHandler()
+	handler := hello.NewHandler()
 	lambda.Start(handler.HandleRequest)
 }

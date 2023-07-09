@@ -1,4 +1,4 @@
-module adc.github.trendmicro.com/container-security/vcs-inventory
+module github.com/Barney30818/serverless-template
 
 go 1.20
 
