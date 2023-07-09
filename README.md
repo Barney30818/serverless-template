@@ -30,3 +30,7 @@ Execute make build command to build a zip file.
 ```
 $ npm run serverless -- deploy --stage <stageName> --region <regionName>
 ```
+
+### Test Deploy
+![截圖 2023-07-09 下午2 26 23](https://github.com/Barney30818/serverless-template/assets/69409373/2c78a4c5-b85b-42ac-a744-a7c72d32b38d)
+![截圖 2023-07-09 下午2 25 50](https://github.com/Barney30818/serverless-template/assets/69409373/8bd4564f-6aee-4b58-bc13-dce8b15a1101)
