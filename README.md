@@ -1,36 +1,59 @@
-# serverless-template
+# Vision One Container Security serverless application template
 
-## Introduction
+If you find issues or improvements, please contribute back to the template repo 🙏
 
-//TBD
-
-As this is a serverless application, the [Serverless Framework](https://serverless.com/) is used to derive and deploy a CloudFormation template based on the specified [serverless.yml](./serverless.yml).
-
-You need to configure `serverless.yml` like setting "vpc", "iam", "s3bucket", and so on infra...to meet your requirement.
+_**Rewrite this README for your own application after initial setup**_
 
 ## Setup
 
-1. Install [Node.js](https://nodejs.org/) and [Go](https://go.dev/).
-2. On first checkout of the repo, you'll need to install and update all packages to ensure your application is initialized successfully.
+1. Address all `TODO` comments.
 
-        $ go mod tidy
+2. Install [Node.js](https://nodejs.org/) and [Go](https://go.dev/).
 
-        $ npm install
+3. Install and upgrade all packages to ensure your application is initialized with the latest package versions.  Note, this only need be done once.
+
+       go get -t -u ./...
+       go mod tidy
+
+       npm update
+       npx ncu -u
+
+4. Commit changes
+
+       git add .
+       git commit
+
+That's it, you are good to start coding!
+
+For more on building AWS Lambdas with Go, see [AWS docs](https://docs.aws.amazon.com/lambda/latest/dg/lambda-golang.html)
+
+## Golang Linter Configuration
+
+Change the .golangci.yml file to match your project's needs.
+
+Execute the linter with:
+
+    make lint
+
+If you want to run the linter with auto-fixing, run:
+
+    make lint-fix
 
 ## Build
-If you have built a zip file, remember to execute clean command before build to make sure that the build will be the latest version of your code.
 
-    $ make clean
+Run the following command to build the application:
 
-Execute make build command to build a zip file.
+    make clean build
 
-    $ make build
+## Test
+
+Testing setup and execution is left to the developer.
 
 ## Deploy
-```
-$ npm run serverless -- deploy --stage <stageName> --region <regionName>
-```
 
-### Test Deploy
-![截圖 2023-07-09 下午2 26 23](https://github.com/Barney30818/serverless-template/assets/69409373/2c78a4c5-b85b-42ac-a744-a7c72d32b38d)
-![截圖 2023-07-09 下午2 25 50](https://github.com/Barney30818/serverless-template/assets/69409373/8bd4564f-6aee-4b58-bc13-dce8b15a1101)
+
+### Deploy to Production
+
+Deployment to network-one-production is done by GitHub Actions on a push to the main branch
+
+Ensure that the [.github/workflows/release.yaml](.github/workflows/release.yaml) has the TODO addressed to enable deployment to production
